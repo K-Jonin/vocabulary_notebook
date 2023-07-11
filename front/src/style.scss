@@ -1,0 +1,66 @@
+$main-color: #59A1CD;
+$sub-color-gray-light01: #EDEDED;
+$sub-color-gray-light02: #D5D5D5;
+$sub-color-gray-dark: #708090;
+$edit-color: #80FF54;
+$delete-color: #FF5454;
+
+/* 基本スタイル設定 */
+* {
+    margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+    font-size: 0.8em;
+}
+
+li {
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	resize: none;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background: transparent;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,160 @@
+@import "../../style.scss";
+
+.vocabularies {
+    width: 100%;
+    height: 88vh;
+    .buttons {
+        width: 50%;
+        height: calc(15% - 10px);
+        margin: 0 auto 10px;
+        display: flex;
+        justify-content: right;
+        align-items: end;
+        button {
+            width: 65px;
+            height: 65px;
+            margin: 0 15px 1rem 0;
+            position: relative;
+            text-align: center;
+            border-radius: 50%;
+            transition: .2s;
+            svg {
+                font-size: 35px;
+                color: #fff;
+            }
+            span {
+                width: 150%;
+                position: absolute;
+                bottom: -18px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        button:hover {
+            background-color: $main-color;
+        }
+        .default {
+            background-color: $sub-color-gray-light02;
+        }
+        .onClick {
+            background-color: $main-color;
+        }
+        .btnPlaying {
+            svg {
+                margin-left: 5px;
+            }
+        }
+        .btnCancel:hover, .btnStopPlayback:hover {
+            background-color: $delete-color;
+        }
+    }
+    .main {
+        position: relative;
+        width: 100%;
+        height: 85%;
+        .vocabulary {
+            width: 50%;
+            height: 60vh;
+            margin: 0 auto 0;
+            border-radius: 30px;
+            background-color: $sub-color-gray-light02;
+            z-index: 999;
+            cursor: pointer;
+            .vocabularyInner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                p {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                svg {
+                    position: absolute;
+                    left: 40px;
+                    bottom: 30px;
+                    font-size: 30px;
+                    color: #fff;
+                }
+            }
+        }
+        .swicthPageButtons {
+            width: 60%;
+            position: absolute;
+            top: 30vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            button {
+                svg {
+                    font-size: 40px;
+                }
+            }
+        }
+        .page {
+            position: absolute;
+            top: calc(60vh + 1rem + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+        }
+        .vocabularyInput {
+            width: 60%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 30vh 30vh;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            p {
+                width: 100%;
+                position: relative;
+                border-radius: 20px;
+                text-align: center;
+                background-color: $sub-color-gray-light02;
+                label {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: #fff;
+                    font-size: 1.2rem;
+                }
+                textarea {
+                    width: 90%;
+                    height: 70%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    // display: table-cell;
+                    vertical-align: middle;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    border: solid 1px #000;
+                }
+            }
+            .vocabularyText {
+                // height: 60vh;
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
+            }
+            .translation {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+
+            }
+            .memo {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+        }
+    }
+}

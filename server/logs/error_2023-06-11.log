@@ -1,0 +1,5 @@
+2023/06/11 00:48:02 logging.go:34: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE
+				vocabulary_id = ?' at line 6
+2023/06/11 00:50:39 logging.go:34: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE vocabulary_id = ?' at line 6
+2023/06/11 00:52:16 logging.go:34: Error 1054 (42S22): Unknown column 'transition' in 'field list'
+2023/06/11 00:53:44 logging.go:34: sql: expected 4 arguments, got 3

@@ -1,0 +1,111 @@
+@import "../../style.scss";
+
+.header {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: $main-color;
+    .menu-area {
+        .menu-btn{
+            width: 50px;
+            height:50px;
+            margin: calc((12vh - 50px) / 2) 0 0 35px;
+            position: relative;
+            // background: $sub-color-gray-light02;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        /*ボタン内側*/
+        .menu-btn span{
+            height: 3px;
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            border-radius: 5px;
+            background: #fff;
+            width: 80%;
+        }
+        .menu-btn span:nth-of-type(1) {
+            top:5px;
+        }
+        .menu-btn span:nth-of-type(2) {
+            top:15px;
+        }
+        .menu-btn span:nth-of-type(3) {
+            top:25px;
+        }
+        .menu-btn span:nth-of-type(3)::after {
+            content:"Menu";
+            position: absolute;
+            top:5px;
+            left:-4px;
+            letter-spacing: 0.1rem;
+            color: #fff;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+        .menu-btn.active span:nth-of-type(1) {
+            top: 10px;
+            left: 18px;
+            transform: translateY(6px) rotate(-45deg);
+            width: 80%;
+        }
+        .menu-btn.active span:nth-of-type(2) {
+            opacity: 0;
+        }
+        .menu-btn.active span:nth-of-type(3){
+            top: 22px;
+            left: 18px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 80%;
+        }
+        .menu-btn.active span:nth-of-type(3)::after {
+            content:"Close";
+            transform: translateY(0) rotate(-45deg);
+            top:8px;
+            left:12px;
+        }
+
+        //メニューのスタイル
+        .menu {
+            display: none;
+            width: 300px;
+            height: 88vh;
+            opacity: 0;
+            position: fixed;
+            top: 12vh;
+            left: 0px;
+            background-color: $sub-color-gray-light01;
+            transform: translateX(-100px);
+            transition: all .4s;
+        }
+        .menu.active {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    .user-info-area {
+        margin-right: 35px;
+        display: flex;
+        align-items: center;
+        .name {
+            margin-right: 14px;
+            font-size: 1.2rem;
+            color: #fff;
+            span {
+                margin-left: 0.3rem;
+                font-size: 1rem;
+            }
+        }
+        .user-icon {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
+}

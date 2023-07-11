@@ -1,0 +1,2 @@
+2022/11/27 11:28:17 logging.go:34: sql: no rows in result set
+2022/11/27 12:10:42 logging.go:34: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'user_id = ?' at line 1
