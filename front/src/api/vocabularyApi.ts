@@ -66,3 +66,26 @@ export async function modifyVocabulary(formData: FormData) {
     }
     return true;
 }
+
+/**
+ * 理解度更新
+ * @param formData フォームデータ
+ */
+export async function updateComprehension(formData: FormData) {
+    let response;
+    try {
+        response = await axios.put(`${constants.API_BASE_URL}/vocabulary/modify/comprehension`, formData);
+    } catch(err) {
+        showErrorToast(errorMessages.ERROR_MSG_SYSTEM_ERROR);
+        return false;
+    }
+
+    // エラーチェック
+    if (constants.KEY_API_RESPONSE_ERROR_MESSAGE in response?.data) {
+        for (const msg of response.data[constants.KEY_API_RESPONSE_ERROR_MESSAGE]) {
+            showErrorToast(msg);
+        }
+        return false;
+    }
+    return true;
+}

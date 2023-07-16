@@ -73,11 +73,78 @@
                     font-weight: 600;
                 }
                 svg {
+                    font-size: 30px;
+                }
+                .playAudio {
                     position: absolute;
                     left: 40px;
                     bottom: 30px;
-                    font-size: 30px;
-                    color: #fff;
+                    svg {
+                        color: #fff;
+                    }
+                }
+                .comprehension {
+                    width: 120px;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 30px;
+                    display: flex;
+                    justify-content: space-around;
+                    button {
+                        display: block;
+                        position: relative;
+                        .first {
+                            display: block;
+                            position: absolute;
+                            top: -10px;
+                            left: -8px;
+                            opacity: 0;
+                            transition: .5s;
+                            span {
+                                display: block;
+                                position: relative;
+                                padding: 8px;
+                                color: #444;
+                                font-size: .5rem;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                                background-color: #fff;
+                                border-radius: 10px;
+                            }
+                            span::before{
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                width: 0;
+                                height: 0;
+                                left: 8px;
+                                bottom: -5px;
+                                border-top: 5px solid #fff;
+                                border-right: 5px solid transparent;
+                                border-left: 5px solid transparent;
+                              }
+                        }
+                    }
+                    svg {
+                        position: relative;
+                        transition: .3s;
+                        z-index: 100;
+                    }
+                    .bad svg:hover {
+                        color: #A386F0;
+                    }
+                    .good svg:hover {
+                        color: #E3D922;
+                    }
+                    .perfect svg:hover {
+                        color: #FA5F34;
+                    }
+                    .bad, .good, .perfect {
+                        svg:hover + .first {
+                            top: -32px;
+                            opacity: 1 !important;
+                        }
+                    }
                 }
             }
         }

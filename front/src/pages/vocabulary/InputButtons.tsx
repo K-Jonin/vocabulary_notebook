@@ -33,7 +33,6 @@ function InputButtons({
         if (isRegister) {
             result = await insertVocabulary(formData);
         } else if (isModify) {
-            console.log( vocabularyInput.createModel())
             result = await modifyVocabulary(formData);
         }
 

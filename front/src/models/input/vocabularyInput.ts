@@ -10,6 +10,8 @@ type Inputs = {
     translation: RefObject<HTMLTextAreaElement>,
     /** メモ */
     memo: RefObject<HTMLTextAreaElement>,
+    /** 理解度 */
+    comprehension: number,
 }
 
 /**
@@ -29,6 +31,7 @@ export class vocabularyInput extends inputBase<vocabularyModel> {
             vocabularyText: React.createRef(),
             translation: React.createRef(),
             memo: React.createRef(),
+            comprehension: 0,
         }
     }
 
@@ -40,6 +43,7 @@ export class vocabularyInput extends inputBase<vocabularyModel> {
         this.vocabularyModel.vocabularyText = String(this.inputs.vocabularyText.current?.value);
         this.vocabularyModel.translation = String(this.inputs.translation.current?.value);
         this.vocabularyModel.memo = String(this.inputs.memo.current?.value);
+        this.vocabularyModel.comprehension = String(this.inputs.comprehension);
         return this;
     }
 }

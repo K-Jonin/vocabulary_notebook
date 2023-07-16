@@ -39,6 +39,13 @@ export const constants = {
     /**  vocabularies：作成日時 */
     TABLE_VOCABULARIES_CREATED_AT: "CreatedAt",
 
+    /** vocabularies：理解度：Bad */
+    VOCABULARIES_COMPREHENSION_BAD: 1,
+    /** vocabularies：理解度：Good */
+    VOCABULARIES_COMPREHENSION_GOOD: 2,
+    /** vocabularies：理解度：Perfect */
+    VOCABULARIES_COMPREHENSION_PERFECT: 3,
+
     /**  ラベル名：原文 */
     LABEL_NAME_VOCABYLARY_TEXT: "原文",
     /** ラベル名：翻訳 */

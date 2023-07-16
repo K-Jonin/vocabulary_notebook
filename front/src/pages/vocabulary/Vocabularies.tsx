@@ -50,6 +50,7 @@ function Vocabularies() {
                     : <Vocabulary
                         key={displayIndex}
                         vocabularies={vocabularies[displayIndex]}
+                        setVocabularies={setVocabularies}
                         isDisplayTranslation={isDisplayTranslation}
                         setIsDisplayTranslation={setIsDisplayTranslation}
                         displayIndex={displayIndex}

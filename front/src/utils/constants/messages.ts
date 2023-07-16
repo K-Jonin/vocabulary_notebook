@@ -11,7 +11,9 @@ export const messages = {
     /** 単語編集完了 */
     MSG_CPMPLETE_MODIFY_VOCABULARY: "単語を編集しました！",
     /** 単語削除完了 */
-    MSG_COMPLETE_DELETE_VOCABULARY: "単語「$1」を削除しました"
+    MSG_COMPLETE_DELETE_VOCABULARY: "単語「$1」を削除しました",
+    /** 理解度更新完了 */
+    MSG_COMPLETE_UPDATE_COMPREHENSION: "理解度を更新しました",
 }
 
 /** エラーメッセージ */
